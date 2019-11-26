@@ -10,5 +10,7 @@ describe('Login Tests', ()=>{
         LoginPage.userLogin('+79252752982', '1488aret1488');
         assert.equal(MainPage.isMainPageLoaded(), true, 'Main Page is not loaded');
         assert.equal(MainPage.getProfileName(), 'Петр', 'Profile name not correct');
+        MainPage.userLogout();
+        assert.equal(LoginPage.isLoginPageLoaded(), true, 'Login Page is not loaded');
     });
 });
